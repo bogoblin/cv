@@ -27,7 +27,8 @@
         text-align: left;
         width: auto;
         height: auto;
-        margin: auto;
+        /*margin: auto;*/
+        margin-bottom: 20px;
     }
     div.info {
         display: flex;
@@ -97,11 +98,15 @@
     }
 
     @media print {
+        .noprint {
+            display: none;
+        }
+        .pagebreak {
+            page-break-before: always;
+        }
+
         body {
-            font-size: 11pt;
-            margin: 0;
-
-
+            font-size: 12pt;
         }
         h2 {
             -webkit-print-color-adjust: exact !important;
@@ -130,6 +135,7 @@
             <div class="info">
                 <span><i class="fas fa-envelope-open"></i>   bobby@bogoblin.com</span>
                 <span><i class="fas fa-phone"></i>  +44 7583 192 473</span>
+                <span><a href="https://www.linkedin.com/in/robmccann95/"><i class="fab fa-linkedin"></i>  robmccann95</a></span>
             </div>
         </div>
     </div>
